@@ -125,6 +125,14 @@ a{
 }
 
 
+@media (max-width: 767px) { /* Apply styles for mobile devices */
+    .table-wrapper {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+  }
+  
+
 
 .nav-tabs{
     background-color:cadetblue;

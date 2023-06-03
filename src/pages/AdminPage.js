@@ -171,41 +171,44 @@ async function getOrdersdata() {
                         <h3>Products List</h3>
                         <button className="btn btn-primary rounded-pill mr-2" onClick={addHandler}>Add Product</button>
                       </div>
-                      <table className="table table-striped table-bordered mx-auto cartOrder">
-                        <thead>
-                          <tr>
-                            <th className="text-center">Image</th>
-                            <th className="text-center">Name</th>
-                            <th>Category</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            {products.map((item) => {
-                            return (
-                              <tr key={item.id}>
-                                <td className="text-center">
-                                  <img src={item.imageURL} height="90" width="90" alt={item.name} />
-                                </td>
-                                <td className="text-center">{item.name}</td>
-                                <td>{item.category}</td>
-                                <td>{item.price}</td>
-                                <td>
-                                  <FaTrashAlt  onClick={() => {deleteProduct(item)}} color='red' size={20} style={{ marginRight: '10px' }}/>
-                                  <FaEdit onClick={() => editHandler(item)} color='blue' size={20}/>
-                                </td>
-                                {/* <td>
-                                {showAlert && (
-                                      <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
-                                        Item deleted successfully!
-                                      </Alert>
-                                    )}
-                                </td> */}
+
+                      <div className='table-wrapper'>
+                          <table className="table table-striped table-bordered mx-auto cartOrder">
+                            <thead>
+                              <tr>
+                                <th className="text-center">Image</th>
+                                <th className="text-center">Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Action</th>
                               </tr>
-                            )})}
-                        </tbody>
-                      </table>
+                            </thead>
+                            <tbody>
+                                {products.map((item) => {
+                                return (
+                                  <tr key={item.id}>
+                                    <td className="text-center">
+                                      <img src={item.imageURL} height="90" width="90" alt={item.name} />
+                                    </td>
+                                    <td className="text-center">{item.name}</td>
+                                    <td>{item.category}</td>
+                                    <td>{item.price}</td>
+                                    <td>
+                                      <FaTrashAlt  onClick={() => {deleteProduct(item)}} color='red' size={20} style={{ marginRight: '10px' }}/>
+                                      <FaEdit onClick={() => editHandler(item)} color='blue' size={20}/>
+                                    </td>
+                                    {/* <td>
+                                    {showAlert && (
+                                          <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
+                                            Item deleted successfully!
+                                          </Alert>
+                                        )}
+                                    </td> */}
+                                  </tr>
+                                )})}
+                            </tbody>
+                          </table>
+                      </div>
 
                       {/* react-bootstrap Modal For Updating in Firebase*/}
                       <Modal show={show} onHide={handleClose}>
@@ -238,30 +241,28 @@ async function getOrdersdata() {
                       {/* Only showing the user selected items filter */}
                       {orders.map(order=>{
                           return(
-                                  <div className='table-responsive'>
-                                      <table className="table table-striped table-bordered mx-auto order">
-                                          <thead>
-                                            <tr>
-                                                <th className="text-center">Image</th>
-                                                <th className="text-center">Name</th>
-                                                <th>Price</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                                {order.cartItems.map((item) =>{
-                                                    return (
-                                                        <tr key={item.id}>
-                                                            <td className="text-center">
+                                <table className="table table-striped table-bordered mx-auto order">
+                                  <thead>
+                                      <tr>
+                                          <th className="text-center">Image</th>
+                                          <th className="text-center">Name</th>
+                                          <th>Price</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                        {order.cartItems.map((item) =>{
+                                        return (
+                                                    <tr key={item.id}>
+                                                        <td className="text-center">
                                                                 <img src={item.imageURL} height="90" width="90" alt={item.name} />
-                                                            </td>
-                                                            <td className="text-center">{item.name}</td>
-                                                            <td>{item.price}</td>
-                                                        </tr>
-                                                    );
-                                                    })}
-                                          </tbody>
-                                      </table>
-                                  </div> 
+                                                        </td>
+                                                        <td className="text-center">{item.name}</td>
+                                                        <td>{item.price}</td>
+                                                    </tr>
+                                               );
+                                               })}
+                                  </tbody>
+                                </table>
                                )
                              })}
                   </Tab>
