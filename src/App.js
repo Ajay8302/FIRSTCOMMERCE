@@ -10,7 +10,7 @@ import CartPage from "./pages/CartPage";
 import "./stylesheets/Layout.css";
 import  "./stylesheets/products.css";
 import  "./stylesheets/authentication.css";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import OrdersPage from "./pages/OrdersPage";
 import AdminPage from "./pages/AdminPage";

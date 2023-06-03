@@ -16,22 +16,22 @@ function RegisterPage() {
   const[loading,setLoading] = useState(false);
 
   //For Email-Password Auth- for new User
-  const register=async()=>{
+  const register = async () => {
     try {
-      setLoading(true)
-      const result = await createUserWithEmailAndPassword(auth, email, password)
-      setLoading(false)
-      toast.success("Registration Successful")
-      setEmail('')
-      setPassword('')
-      setCPassword('')
-    } 
-    catch (error) {
-      console.log(error)
-      toast.error("Registration failed")
-      setLoading(false)
+      setLoading(true);
+      await createUserWithEmailAndPassword(auth, email, password);
+      setLoading(false);
+      toast.success("Registration Successful");
+      setEmail('');
+      setPassword('');
+      setCPassword('');
+    } catch (error) {
+      console.log(error);
+      toast.error("Registration failed");
+      setLoading(false);
     }
-  }
+  };
+  
 
   return (
     <div className="register-parent">

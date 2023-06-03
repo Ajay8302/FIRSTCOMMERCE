@@ -80,37 +80,30 @@ function CartPage() {
 
       console.log(addressinfo)
 
-      //Sending Data to Firebase order Collection
-      const orderInfo = {
+      // Sending Data to Firebase order Collection
+    const orderInfo = {
       cartItems,
       addressinfo,
-      email : JSON.parse(localStorage.getItem("CurrentUser")).user.email,
-      userid : JSON.parse(localStorage.getItem("CurrentUser")).user.uid
-    }
+      email: JSON.parse(localStorage.getItem("CurrentUser")).user.email,
+      userid: JSON.parse(localStorage.getItem("CurrentUser")).user.uid
+    };
 
 
-    //for Showing order mssg
-    try {
+    // for Showing order mssg
+    try 
+    {
       setLoading(true);
-      const result = await addDoc(collection(fireDB, "orders"), orderInfo)
-      setLoading(false)
-      toast.success("order placed successfully!")
-      handleClose()
-
-    } 
-    catch (error) {
-      setLoading(false)
-      toast.error("order failed!")
-      
+      await addDoc(collection(fireDB, "orders"), orderInfo);
+      setLoading(false);
+      toast.success("Order placed successfully!");
+      handleClose();
+    } catch (error) {
+      setLoading(false);
+      toast.error("Order failed!");
     }
-  }
+};
 
-
-  
-
-
-
-  return (
+return (
     <div className="p-3">
       <Layout loading={loading}>
         <table className="table table-striped table-bordered mx-auto cartOrder">
@@ -183,6 +176,6 @@ function CartPage() {
       </Layout>
     </div>
   );
-}
+              }
 
 export default CartPage;
