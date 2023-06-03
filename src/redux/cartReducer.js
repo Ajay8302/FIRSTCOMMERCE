@@ -4,6 +4,7 @@ const initialState = {
 };
 
 export const cartReducer = (state = initialState, action) => {
+  
   switch (action.type) {
 
     //Case 1 for Adding Data in Cart(Local storage)

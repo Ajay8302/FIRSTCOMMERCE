@@ -55,7 +55,7 @@ function RegisterPage() {
                 <hr />
                 <input type="email" className="form-control" placeholder="e-mail" value={email}  onChange={(e) => {setEmail(e.target.value)}}/>
                 <input type="password" className="form-control" placeholder="password" value={password}  onChange={(e) => {setPassword(e.target.value)}}/>
-                <input type="text" className="form-control" placeholder="confirm-password" value={cPassword}  onChange={(e) => {setCPassword(e.target.value)}}/>
+                <input type="password" className="form-control" placeholder="confirm-password" value={cPassword}  onChange={(e) => {setCPassword(e.target.value)}}/>
 
                 <button className="btn btn-primary my-3" onClick={register}>REGISTER</button>
                 <hr />
