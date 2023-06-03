@@ -1,0 +1,85 @@
+/* All Styling Related to Login and registration goes here */
+
+
+/* FOR REGISTER Page */
+.form-control{
+    box-shadow: none;
+}
+
+.form-control:focus{
+    box-shadow:none !important;
+}
+
+input, textarea{
+    margin-top: 15px;
+}
+
+
+
+
+.register-form{
+    /* width: 100%; */
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: whitesmoke;
+    /* margin-left: 70px !important;
+    margin-right: 70px !important; */
+
+}
+
+
+
+.register-parent{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.register-top{
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color:#5c33a0;
+}
+
+.z1{
+    z-index: 1 !important;
+}
+
+
+/* ====================================================================================================== */
+
+/* FOR LOGIN Page */
+
+
+.login-form{
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: whitesmoke;
+}
+
+
+.login-parent{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.login-bottom{
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#5c33a0;
+}
+
+.z1{
+    z-index: 1 !important;
+}

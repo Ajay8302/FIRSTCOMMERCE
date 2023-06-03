@@ -1,0 +1,83 @@
+ .product-img{
+    height: 240px;
+    width: 200px;
+}
+
+.product p{
+    min-height: 3rem;
+}
+
+.product{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.product:hover .product-actions{
+    opacity: 1;
+}
+.product-actions{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.8);
+    color: white;
+    font-weight: bold !important;
+}
+
+.image-effect{
+    overflow: hidden;
+    margin: 0 auto;
+    /* object-fit: cover; */
+}
+
+.product-info-img{
+    height: 70vh;
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    display: block !important;
+    /* object-fit: cover !important;  */
+
+
+}
+
+.product-info-img:hover{
+    transform: scale(1.5);
+}
+
+
+
+/* For CartPage.js(for Styling of Total amount only) */
+.total-amount{
+    background: linear-gradient(45deg, #5a33a063, #fad0c4);
+  border-radius: 41px;
+  padding: 12px;
+  display: inline-block;
+  color: #292626;
+  font-weight: bold;
+}
+
+.cartOrder{
+    box-shadow:rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset;
+    border-bottom-color: 5px,solid,black;
+    background-color:aliceblue;
+}
+
+
+
+/* for Order page table */
+.order{
+    background-color:aliceblue;
+    box-shadow:rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset;
+    border-bottom-color: 5px,solid,black;
+}
+
+.ordertable{
+    
+}

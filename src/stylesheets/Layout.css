@@ -1,0 +1,131 @@
+/* Header.js */
+.header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 2;
+}
+
+/* for header count */
+.cart-count{
+    background-color: deepskyblue;
+    border-radius:5px;
+    
+}
+
+
+
+
+.navbar{
+    background-color: #5c33a0 !important;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.navbar-nav{
+    margin-right: 20px;
+}
+
+.navbar-brand{
+    color: white !important;
+    margin-left: 1 px;
+    font-weight: bold;
+}
+
+
+/* Layout.js */
+.content{
+    padding-top: 100px;
+    /* background-color:aliceblue !important; */
+}
+
+
+/* footer.js */
+.container .scroll{
+    max-width: 100%;
+    background-color: white !important;
+    text-decoration: aliceblue;
+    padding: 100px;
+    text-align: justify;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+
+
+    /* for Scrollbar */
+    margin:4px, 4px;
+    width: 500px;
+    height: 110px;
+    overflow: auto;
+}
+
+
+.footer{
+    padding: 10px;
+    text-align: center;
+    background-color:#744eb0;   
+    color:white;
+    position: fixed !important;
+    bottom:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px !important;
+  
+}
+
+
+
+.button:hover{
+    background-color:#5C33A0;
+}
+
+
+
+/* for Loading a Loader on the page for Homepage->Layout Component */
+/* class from Layout.js */
+.loader{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+.spinner-border{
+    height: 100px;
+    width: 100px;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+/* for search & filter */
+
+.input,select{
+    height: 35px !important;
+}
+
+
+
+
+/* Admin Pannel tabs Styling */
+.nav-item button{
+    color:black !important;
+}
+
+
+
+.nav-tabs{
+    background-color:cadetblue;
+}
