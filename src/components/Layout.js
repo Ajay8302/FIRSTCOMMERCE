@@ -16,7 +16,7 @@ function Layout(props) {
         <div className="content scroll">
             {props.children}
         </div>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }
