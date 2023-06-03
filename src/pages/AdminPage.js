@@ -233,33 +233,35 @@ async function getOrdersdata() {
                       </Modal>
                   </Tab>
                    
-                  {/* Tab 1 - All User Orders Data */}
+                  {/* Tab 2 - All User Orders Data */}
                   <Tab eventKey="orders" title="Orders">
                       {/* Only showing the user selected items filter */}
                       {orders.map(order=>{
                           return(
-                              <table className="table table-striped table-bordered mx-auto order">
-                                  <thead>
-                                  <tr>
-                                      <th className="text-center">Image</th>
-                                      <th className="text-center">Name</th>
-                                      <th>Price</th>
-                                  </tr>
-                                  </thead>
-                                  <tbody>
-                                      {order.cartItems.map((item) =>{
-                                          return (
-                                              <tr key={item.id}>
-                                                  <td className="text-center">
-                                                      <img src={item.imageURL} height="90" width="90" alt={item.name} />
-                                                  </td>
-                                                  <td className="text-center">{item.name}</td>
-                                                  <td>{item.price}</td>
-                                              </tr>
-                                          );
-                                          })}
-                                  </tbody>
-                              </table> 
+                                  <div className='table-responsive'>
+                                      <table className="table table-striped table-bordered mx-auto order">
+                                          <thead>
+                                            <tr>
+                                                <th className="text-center">Image</th>
+                                                <th className="text-center">Name</th>
+                                                <th>Price</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                {order.cartItems.map((item) =>{
+                                                    return (
+                                                        <tr key={item.id}>
+                                                            <td className="text-center">
+                                                                <img src={item.imageURL} height="90" width="90" alt={item.name} />
+                                                            </td>
+                                                            <td className="text-center">{item.name}</td>
+                                                            <td>{item.price}</td>
+                                                        </tr>
+                                                    );
+                                                    })}
+                                          </tbody>
+                                      </table>
+                                  </div> 
                                )
                              })}
                   </Tab>
